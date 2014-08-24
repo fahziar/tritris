@@ -19,3 +19,14 @@
 *.exe
 *.out
 *.app
+
+#ignore /Debug and /Tritris/Debug
+/Debug/*
+/Tritris/Debug/*
+
+#ignore /Release and /Tritris/Release
+/Release/*
+/Tritris/Release/*
+
+#ignore sdf files
+*.sdf
