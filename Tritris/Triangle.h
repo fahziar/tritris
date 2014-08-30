@@ -22,7 +22,7 @@ public:
 	void setOrientation(orientationEnum orientation);
 	orientationEnum getOrientation();
 
-	static int triangleSize;
+	const static int triangleSize = 25;
 };
 
 #endif

@@ -1,8 +1,6 @@
 #include "include.h"
 #include "Triangle.h"
 
-int triangle::triangleSize = 25;
-
 triangle::triangle()
 {
 	

@@ -3,7 +3,7 @@
 #include "include.h"
 
 const int windowWidth = 400;
-const int windowHeigth = 630;
+const int windowHeigth = 650;
 
 int initOpenGL();
 /* Inisiasi window dan openGL context*/

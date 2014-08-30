@@ -12,10 +12,20 @@ private:
 public:
 	mainAreaCell();
 	mainAreaCell(int x, int y);
-	bool isFit(triangle t);
+
+	void setX(int x);
+	void setY(int y);
+
+	bool isFitFromAbove(triangle t);
+	
 	bool addTriangle(triangle t);
+	void addTrianlge(triangle t, int id);
+	triangle getTriangle(int id) const;
 	bool removeTriangle(int id);
+	
 	void draw();
+	bool isEmpty() const;
+	int getNbTriangle() const;
 };
 
 #endif

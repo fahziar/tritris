@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <Windows.h>
 #include "Triangle.h"
+#include "MainArea.h"
 #include "MainAreaCell.h"
 #include "Util.h"
 
@@ -46,16 +47,35 @@ void render()
 {
 	triangle t1, t2;
 	t1.setOrientation(rightUp);
-	t2.setOrientation(rightDown);
+	t2.setOrientation(leftDown);
 	t1.setColor(green);
 	t2.setColor(blue);
 
-	mainAreaCell mac(10, 5);
-	mac.addTriangle(t2);
-	if (!mac.addTriangle(t1))
-		MessageBox(NULL, "ERROR", "ERROR", MB_OK);
+	mainArea ma(5, 25);
+	//if (!mac.addTriangle(t1))
+	//	MessageBox(NULL, "ERROR", "ERROR", MB_OK);
+	
+	ma.setTriangle(0, 0, t2);
+	ma.setTriangle(0, 0, t1);
 
-	mac.draw();
+	ma.moveAllTriangleDownward(0, 0);
+	ma.setTriangle(1, 1, t2);
+	ma.setTriangle(1, 1, t1);
+	ma.setTriangle(2, 1, t2);
+	ma.setTriangle(2, 1, t1);
+	ma.setTriangle(3, 1, t2);
+	ma.setTriangle(3, 1, t1);
+	ma.setTriangle(4, 1, t2);
+	ma.setTriangle(4, 1, t1);
+	ma.setTriangle(4, 0, t2);
+	ma.setTriangle(4, 0, t1);
+	
+	if (ma.isLineFullOfTriangle(1))
+	{
+		//MessageBox(NULL, "Baris dua penuh sama segitiga", "INFO", MB_OK);
+		ma.removeAllTrianglesInRow(1);
+	}
+	ma.draw();
 	
 
 	glutSwapBuffers();

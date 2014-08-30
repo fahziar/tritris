@@ -70,12 +70,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainArea.cpp" />
     <ClCompile Include="MainAreaCell.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include.h" />
+    <ClInclude Include="MainArea.h" />
     <ClInclude Include="MainAreaCell.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Util.h" />
