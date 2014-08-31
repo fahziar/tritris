@@ -21,6 +21,9 @@ public:
 
 	bool isLineFullOfTriangle(int row);
 	void removeAllTrianglesInRow(int row);
+
+	int getNbRow();
+	int getNbCol();
 };
 
 #endif

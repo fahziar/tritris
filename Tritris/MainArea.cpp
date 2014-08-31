@@ -114,3 +114,13 @@ void mainArea::removeAllTrianglesInRow(int row)
 	}
 
 }
+
+int mainArea::getNbCol()
+{
+	return this->nbCol;
+}
+
+int mainArea::getNbRow()
+{
+	return this->nbRow;
+}
