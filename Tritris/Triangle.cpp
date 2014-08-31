@@ -1,10 +1,26 @@
+#include <cstdio>
 #include "include.h"
 #include "Triangle.h"
 
 triangle::triangle()
 {
-	
-}
+	int random = (rand() % 4) + 1;
+
+	switch (random)
+	{
+	case 1:
+		this->color = green;
+		break;
+	case 2:
+		this->color = blue;
+		break;
+	case 3:
+		this->color = red;
+		break;
+	default:
+		this->color = yellow;
+	}
+} 
 
 triangleColor triangle::getColor()
 {
