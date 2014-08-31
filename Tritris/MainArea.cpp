@@ -58,7 +58,8 @@ bool mainArea::moveAllTriangleDownward(int colSource, int rowSource)
 		cells.at(getAt(colSource, rowSource)).removeTriangle(0);
 		cells.at(getAt(colSource, rowSource + 1)).addTriangle(temp);
 	}
-	
+
+	return true;
 }
 
 void mainArea::setTriangle(int x, int y, triangle t)
