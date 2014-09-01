@@ -78,7 +78,8 @@ void triangle::draw(int x, int y)
 	}
 	else if (color == yellow)
 	{
-		glColor3f(1.f, 1.f, 0.1294f);
+		//glColor3f(1.f, 1.f, 0.1294f);
+		glColor3f(0.95f, 0.87f, 0.f);
 	}
 
 	glBegin(GL_TRIANGLES);

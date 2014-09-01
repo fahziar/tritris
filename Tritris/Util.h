@@ -3,7 +3,7 @@
 #include "include.h"
 
 const int windowWidth = 400;
-const int windowHeigth = 650;
+const int windowHeigth = 660;
 
 int initOpenGL();
 /* Inisiasi window dan openGL context*/
@@ -11,4 +11,8 @@ int initOpenGL();
 void mainLoop(int val);
 
 void render();
+
+void initMainGame();
+
+void handleKeys(unsigned char key, int x, int y);
 #endif

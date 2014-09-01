@@ -11,6 +11,7 @@ int main(int argc, char * argv[])
 	glutCreateWindow("Tritris");
 
 	initOpenGL();
+	initMainGame();
 	glutMainLoop();
 	return 0;
 }

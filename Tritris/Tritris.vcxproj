@@ -73,6 +73,7 @@
     <ClCompile Include="MainArea.cpp" />
     <ClCompile Include="MainAreaCell.cpp" />
     <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="TriangleGroup.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +81,7 @@
     <ClInclude Include="MainArea.h" />
     <ClInclude Include="MainAreaCell.h" />
     <ClInclude Include="Triangle.h" />
+    <ClInclude Include="TriangleGroup.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

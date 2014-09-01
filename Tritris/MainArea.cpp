@@ -1,4 +1,5 @@
 #include "MainArea.h"
+#include "include.h"
 
 mainArea::mainArea(int nbCol, int nbRow) :nbCol(nbCol), nbRow(nbRow), cells(nbCol * nbRow)
 {
@@ -21,7 +22,7 @@ void mainArea::draw()
 	{
 		for (j = 0; j < nbRow; j++)
 		{
-			this->cells.at(i * j).draw();
+			this->cells.at(getAt(i,j)).draw();
 		}
 	}
 }
@@ -123,4 +124,34 @@ int mainArea::getNbCol()
 int mainArea::getNbRow()
 {
 	return this->nbRow;
+}
+
+mainAreaCell mainArea::getCell(int x, int y)
+{
+	return this->cells.at(getAt(x, y));
+}
+
+void mainArea::drawMainArea()
+{
+	const int width = 5;
+	
+	//bikin border kiri
+	glColor3f(0.49f, 0.49f, 0.49f);
+	glBegin(GL_QUADS);
+	glVertex2f(-5.f, -5.f);
+	glVertex2f(-5.f, (triangle::triangleSize * nbRow) + 5.f);
+	glVertex2f(0.f, (triangle::triangleSize * nbRow) + 5.f);
+	glVertex2f(0.f, -5.f);
+	glEnd();
+
+	//bikin border kanan
+	glBegin(GL_QUADS);
+	glVertex2f((triangle::triangleSize * nbCol), -5.f);
+	glVertex2f((triangle::triangleSize * nbCol), (triangle::triangleSize * nbRow) + 5.f);
+	glVertex2f((triangle::triangleSize * nbCol) + 5.f, (triangle::triangleSize * nbRow) + 5.f);
+	glVertex2f((triangle::triangleSize * nbCol) + 5.f, -5.f);
+	glEnd();
+
+	//bikin border bawah
+
 }

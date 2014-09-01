@@ -15,7 +15,7 @@ public:
 
 	void draw();
 	bool moveAllTriangleDownward(int colSource, int rowSource);
-	triangle getCell(int x, int y);
+	mainAreaCell getCell(int x, int y);
 	void setTriangle(int x, int y, triangle t);
 	triangle removeTriangle(int x, int y);
 
@@ -24,6 +24,8 @@ public:
 
 	int getNbRow();
 	int getNbCol();
+
+	void drawMainArea();
 };
 
 #endif
