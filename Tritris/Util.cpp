@@ -7,10 +7,10 @@
 #include "MainAreaCell.h"
 #include "Util.h"
 
-mainArea * areaUtama;
-triangleGroup * groupSegitiga;
-int score;
-bool gameOver;
+mainArea * areaUtama; //area utama
+triangleGroup * groupSegitiga; //grup utama
+int score; //score game
+bool gameOver; //gameOver
 
 int timeCounter;
 
@@ -48,6 +48,7 @@ void handleKeys(unsigned char key, int x, int y)
 		groupSegitiga->moveDownward();
 	}
 }
+
 int initOpenGL()
 {
 	//Init projection matrix
@@ -73,6 +74,7 @@ int initOpenGL()
 	
 	if (error != GL_NO_ERROR)
 	{
+
 		MessageBox(NULL, "Failed to initialize openGL", "Error", MB_OK | MB_ICONERROR);
 		return -1;
 	}
@@ -125,7 +127,12 @@ void mainLoop(int val)
 				if (!areaUtama->getCell(i, 0).isEmpty())
 				{
 					gameOver = true;
-					MessageBox(NULL, "The game is over", "Game over", MB_OK);
+					std::string message;
+					char temp[100];
+					_itoa_s(score, temp, 10);
+					message = "The game is over. Your score: ";
+					message.append(temp);
+					MessageBox(NULL, message.c_str(), "Game over", MB_OK);
 				}
 				i++;
 			}
@@ -140,11 +147,7 @@ void render()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	areaUtama->drawMainArea();
-	std::string message;
-	char temp[1000];
-	_itoa_s(score, temp, 10);
-	message = "Score: ";
-	message.append(temp);
+	
 
 	/*
 	triangle t1, t2;
